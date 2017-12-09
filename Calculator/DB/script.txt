@@ -1,0 +1,49 @@
+-- Create Database
+CREATE DATABASE `calculator` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE calculator;
+
+-- Create User table
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Create operation table
+
+DROP TABLE IF EXISTS `operation`;
+CREATE TABLE `operation` (
+  `operation_id` int(11) NOT NULL,
+  `operation_name` varchar(255) NOT NULL,
+  PRIMARY KEY (`operation_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `operation` VALUES (1,'ADD'),(2,'SUBTRACT'),(3,'MULTIPLY'),(4,'DIVIDE');
+
+-- Create calculation table
+
+DROP TABLE IF EXISTS `calculation`;
+
+CREATE TABLE `calculation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `operation_id` int(11) NOT NULL,
+  `first_number` int(11) NOT NULL,
+  `second_number` int(11) NOT NULL,
+  `result` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+
+
+
+
+
+
+
+
+
+
