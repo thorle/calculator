@@ -35,7 +35,7 @@ public class OperationServiceImpl implements OperationService {
 	@Override
 	public OperationVO calcalate(int firstNumber, int secondNumber, OperationType method) {
 		OperationVO operationVO = null;
-		if (method.equals(OperationType.DIVIDE) && OperationValidator.isNumberValid(secondNumber)) {
+		if (method.equals(OperationType.DIVIDE) && OperationValidator.isNumberInValid(secondNumber)) {
 			return operationVO;
 		}
 		List<OperationDTO> operationsCached = retrieveCache(firstNumber, secondNumber, method);

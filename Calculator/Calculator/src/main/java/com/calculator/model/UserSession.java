@@ -11,11 +11,6 @@ public class UserSession {
 	public UserSession() {
 	}
 
-	public UserSession(int userId, String username) {
-		this.userId = userId;
-		this.username = username;
-	}
-
 	public String getUsername() {
 		return username;
 	}

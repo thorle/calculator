@@ -10,6 +10,9 @@ public class OperationDTO {
 	private int firstNumber;
 	private int secondNumber;
 	private int result;
+	
+	public OperationDTO() {
+	}
 
 	public OperationDTO(int userId, int operationId, String operationName, int firstNumber, int secondNumber,
 			int result) {

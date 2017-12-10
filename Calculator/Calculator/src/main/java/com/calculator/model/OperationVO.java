@@ -17,10 +17,6 @@ public class OperationVO {
 		return operationType;
 	}
 
-	public void setOperationType(String operationType) {
-		this.operationType = operationType;
-	}
-
 	public int getFirstNumber() {
 		return firstNumber;
 	}
